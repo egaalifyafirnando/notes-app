@@ -5,13 +5,13 @@ function NoteItemFooter({ id, onDelete, onArchive }) {
         <div className="note-item__footer">
             <img
                 src="/images/archive.png"
-                alt=""
+                alt="Archive"
                 onClick={() => onArchive(id)}
                 className="note-item__button"
             />
             <img
                 src="/images/trash.png"
-                alt=""
+                alt="Delete"
                 onClick={() => onDelete(id)}
                 className="note-item__button"
             />
