@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function NoteItemFooter({ id, onDelete, onArchive }) {
     return (
@@ -18,5 +19,11 @@ function NoteItemFooter({ id, onDelete, onArchive }) {
         </div>
     );
 }
+
+NoteItemFooter.propTypes = {
+    id: PropTypes.string.isRequired,
+    onDelete: PropTypes.func.isRequired,
+    onArchive: PropTypes.func.isRequired,
+};
 
 export default NoteItemFooter;
