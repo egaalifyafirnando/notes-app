@@ -1,6 +1,6 @@
 import React from 'react';
 import dayjs from 'dayjs';
-import { getData } from '../utils/data';
+import { getInitialData } from '../utils/index';
 import NoteList from './NoteList';
 import NoteInput from './NoteInput';
 import NoteListArchive from './NoteListArchive';
@@ -10,7 +10,7 @@ class NoteApp extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            notes: getData(),
+            notes: getInitialData(),
             search: '',
         };
 
@@ -50,7 +50,7 @@ class NoteApp extends React.Component {
         this.setState({ notes });
     }
 
-    onAddNoteHandler({ title, body, archived }) {
+    onAddNoteHandler({ title, body }) {
         this.setState((prevState) => {
             return {
                 notes: [
